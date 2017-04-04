@@ -1,12 +1,10 @@
-<DOCTYPE html!>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<title>Fotos</title>
 
-<body> 
-
-<p>Meine Fotos<p>
-
-<iframe src="https://app.box.com/embed_widget/s/fd5jhkuh2fhqq7z1fmyn6n6p5c2u1h0j?view=list&sort=name&direction=ASC&theme=blue" width="500" height="400" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
-
+</head>
+<body>
+test
 </body>
-
 </html>
