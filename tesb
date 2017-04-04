@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hallo</title>
+</head>
+<body>
+<p>hallo</p>
+<p> Jul is cool<p>
+</br>
+<ul>
+<li> test
+<li> Fabio arbeitet
+</ul>
+
+<a href=http://www.klusemann.at/>Klusemann </a>
+
+<img src="C:\Users\Leo\Desktop\Foto\Bild3.jpg" alt="Test Bild" border="0" width="1920" height="1080">
+
+</body>
+</html>
