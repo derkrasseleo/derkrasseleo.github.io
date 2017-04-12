@@ -3,20 +3,19 @@
     <title>
         Form
     </title>
-
+    </head>
+<body>
 <script 
-        type="text/javascript">
-function showConfirmationDialog() {
-    var textbox = document.getElementById('textbox');
-    var location = document.getElementById('location');
-    alert(textbox.value + '\n' + location.value);
-}
+         type="text/javascript">
+    function namet() {
+      var input = document.getElementById("textbox").value;
+      var input2 = document.getElementById("location").value;   
+      alert( "Name : " +input+" Location : " +input2);
+      window.location.assign("anypage.html")
+    }
 
-...
-
-<input type="button" value="submit" onclick="showConfirmationDialog();" />
-}
 </script>
     <h1> Bitte ausfüllen </h1>
  </body>
+    
  </html>
