@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/leochras
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://leochras.github.io
+  * I am leochras (https://keybase.io/leochras) on keybase.
+  * I have a public key ASBskWdY7nDIOITAuIZZkgxhmaU4-rXryd-je1XXeJQX1Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01209d7fb77627aa24bb0ed658249dcb9d5f9860617db747e085072ec12ca0f2ae2d0a",
+            "host": "keybase.io",
+            "kid": "01206c916758ee70c83884c0b88659920c6199a538fab5ebc9dfa37b55d7789417d40a",
+            "uid": "16440e73bb6473f9d2da9391d3b02a19",
+            "username": "leochras"
+        },
+        "service": {
+            "hostname": "leochras.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.23"
+    },
+    "ctime": 1497351798,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1497351668,
+        "hash": "ecb72e6f58c8e0a0668d2e865df22d251ff79a49e423c251ec63f3c8c7709b1da2073311b5898ad460e586c3b796d0b83325ea17d59ff077716ff3ba7f69b4f0",
+        "seqno": 1166112
+    },
+    "prev": "bc2b5577c69c4bf76fc58ea2db1f18269faddf3e914f029f8f58ed1eba7ea135",
+    "seqno": 14,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgbJFnWO5wyDiEwLiGWZIMYZmlOPq168nfo3tV13iUF9QKp3BheWxvYWTFAvx7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOWQ3ZmI3NzYyN2FhMjRiYjBlZDY1ODI0OWRjYjlkNWY5ODYwNjE3ZGI3NDdlMDg1MDcyZWMxMmNhMGYyYWUyZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNmM5MTY3NThlZTcwYzgzODg0YzBiODg2NTk5MjBjNjE5OWE1MzhmYWI1ZWJjOWRmYTM3YjU1ZDc3ODk0MTdkNDBhIiwidWlkIjoiMTY0NDBlNzNiYjY0NzNmOWQyZGE5MzkxZDNiMDJhMTkiLCJ1c2VybmFtZSI6Imxlb2NocmFzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJsZW9jaHJhcy5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMyJ9LCJjdGltZSI6MTQ5NzM1MTc5OCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk3MzUxNjY4LCJoYXNoIjoiZWNiNzJlNmY1OGM4ZTBhMDY2OGQyZTg2NWRmMjJkMjUxZmY3OWE0OWU0MjNjMjUxZWM2M2YzYzhjNzcwOWIxZGEyMDczMzExYjU4OThhZDQ2MGU1ODZjM2I3OTZkMGI4MzMyNWVhMTdkNTlmZjA3NzcxNmZmM2JhN2Y2OWI0ZjAiLCJzZXFubyI6MTE2NjExMn0sInByZXYiOiJiYzJiNTU3N2M2OWM0YmY3NmZjNThlYTJkYjFmMTgyNjlmYWRkZjNlOTE0ZjAyOWY4ZjU4ZWQxZWJhN2VhMTM1Iiwic2Vxbm8iOjE0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQCcFksmCy0eTtIcViUhmhPqcTNkh2zoAFa9CfCQNsaJ+Hv3IeZ2vjiimXoYB1NSUtf6VMJ7mD2Uy2xj0qN5eewyoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCTBMlQQqp3jtJCK2ERoYSzlxSwfywiRZvqZ4Futowh5aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/leochras
+
+==================================================================
