@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
-<title>LibreSpeed Example</title>
+<title>Wann ist mein Download fertig?</title>
 <link rel="shortcut icon" href="favicon.ico">
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript">
@@ -99,13 +99,6 @@ function I(id){return document.getElementById(id);}
 		position:relative;
 		box-sizing:border-box;
 	}
-	div.testName{
-		position:absolute;
-		top:0.1em; left:0;
-		width:100%;
-		font-size:1.4em;
-		z-index:9;
-	}
 	div.meterText{
 		position:absolute;
 		bottom:1.5em; left:0;
@@ -119,9 +112,6 @@ function I(id){return document.getElementById(id);}
 	#ulText{
 		color:#309030;
 	}
-	#pingText,#jitText{
-		color:#AA6060;
-	}
 	div.meterText:empty:before{
 		color:#505050 !important;
 		content:"0.00";
@@ -131,9 +121,6 @@ function I(id){return document.getElementById(id);}
 		bottom:2em; left:0;
 		width:100%;
 		z-index:9;
-	}
-	div.testGroup{
-		display:inline-block;
 	}
 	@media all and (max-width:65em){
 		body{
@@ -153,7 +140,7 @@ function I(id){return document.getElementById(id);}
 </style>
 </head>
 <body>
-<h1>LibreSpeed Example</h1>
+<h1>Wann ist mein Download fertig?</h1>
 <div id="startStopBtn" onclick="startStop()"></div>
 <div id="test">
 	<div class="testGroup">
@@ -162,29 +149,10 @@ function I(id){return document.getElementById(id);}
 			<div id="dlText" class="meterText"></div>
 			<div class="unit">Mbps</div>
 		</div>
-		<div class="testArea">
-			<div class="testName">Upload</div>
-			<div id="ulText" class="meterText"></div>
-			<div class="unit">Mbps</div>
-		</div>
 	</div>
-	<div class="testGroup">
-		<div class="testArea">
-			<div class="testName">Ping</div>
-			<div id="pingText" class="meterText"></div>
-			<div class="unit">ms</div>
-		</div>
-		<div class="testArea">
-			<div class="testName">Jitter</div>
-			<div id="jitText" class="meterText"></div>
-			<div class="unit">ms</div>
-		</div>
-	</div>
-	<div id="ipArea">
-		IP Address: <span id="ip"></span>
-	</div>
+
 </div>
-<a href="https://github.com/librespeed/speedtest">Source code</a>
+
 <script type="text/javascript">
     initUI();
 </script>
