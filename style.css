@@ -7,7 +7,6 @@ body {
 
 .glow {
     color: #ffffffb9;
-    text-align: center;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
@@ -59,10 +58,6 @@ color: white;
 
 .center {
 text-align: center;
-}
-
-.left {
-text.align: left;
 }
 
 @-webkit-keyframes glow {
