@@ -25,12 +25,12 @@ text-decoration: underline;
 }
 
 hr {
-    align-items: center;
-    width: 600pt;
+    width: 300pt;
     border: 5pt;
-    height: 3pt;
+    height: 2pt;
     background-color: mintcream;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 30pt;
 
 }
 p {
