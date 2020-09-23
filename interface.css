@@ -1,0 +1,69 @@
+body {
+    background-image: url('gradient-small.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 200%;
+}
+
+.glow {
+    color: #ffffffb9;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    }
+
+a {
+    font-family: 'Amiko', sans-serif;  
+    font-size: 20px;
+}
+
+a:link, a:visited {
+color: white;
+background-color: transparent;
+text-decoration: underline;
+}
+
+hr {
+    width: 300pt;
+    border: 5pt;
+    height: 2pt;
+    background-color: mintcream;
+    margin: auto;
+    margin-top: 30pt;
+
+}
+p {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 20px;
+font-style: italic;
+color: white;
+sepe
+
+}
+
+h1 {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 100px;
+color: white;
+font-stretch: wider;
+letter-spacing: 8px;
+margin: 20px;
+}
+
+h2 {
+font-family: 'Josefin Sans', sans-serif;   
+font-size: 50px;
+color: white;
+}
+
+.center {
+text-align: center;
+}
+
+@-webkit-keyframes glow {
+    from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
