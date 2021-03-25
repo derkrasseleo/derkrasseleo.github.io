@@ -6,14 +6,19 @@ function rechner() {
         alert("Noch einmal berechnen?");
         geld = 0;
         rechnen();
-        console.log(test);
     }
     else {
         rechnen();
     }
 
 }
+function setTwoNumberDecimal(el) {
+    el.value = parseFloat(el.value).toFixed(2);
+};
 function rechnen() {
+    
+    <!-- Verteidiger -->
+    
     if (document.getElementById("mute").checked == true) 
         geld = geld + 1000;
     if (document.getElementById("smoke").checked == true) 
@@ -138,10 +143,11 @@ function rechnen() {
     
     spiele = geld / 250;
     zeit = spiele * 15 / 60;
-    zeittage = zeit/24;
+    zeittage = zeit/24
+    ztformatted = setTwoNumberDecimal(zeittage);
 
     document.getElementById("spiele").innerHTML = "Du musst noch " + spiele + " Spiele spielen";
     document.getElementById("geld").innerHTML = "... oder noch " + geld + " Ansehen verdienen";
-    document.getElementById("zeit").innerHTML = "... oder " + zeit + " Stunden bzw. " + zeittage + " Tage durchgehend spielen";
+    document.getElementById("zeit").innerHTML = "... oder " + zeit + " Stunden bzw. " + ztformatted + " Tage durchgehend spielen";
 
 }
