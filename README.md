@@ -1,5 +1,5 @@
 # leochras.github.io
 *leochras' Website*\
-personal website\
+this is my personal website\
 contact: leo@traussnigg.com\
 for further information: look at my website.  \
