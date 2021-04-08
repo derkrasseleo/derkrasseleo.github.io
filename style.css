@@ -15,14 +15,15 @@ body {
 }
 
 a {
-    font-family: 'Amiko', sans-serif;  
+    font-family: 'Amiko', sans-serif;
     font-size: 20px;
 }
 
-a:link, a:visited {
-color: white;
-background-color: transparent;
-text-decoration: underline;
+a:link,
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 hr {
@@ -32,52 +33,54 @@ hr {
     background-color: mintcream;
     margin: auto;
     margin-top: 30pt;
-
 }
+
 p {
-font-size: 20px;
-font-style: italic;
-color: white;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
 }
 
 h1 {
-font-size: 100px;
-color: white;
-font-stretch: wider;
-letter-spacing: 8px;
-margin: 20px;
+    font-size: 100px;
+    color: white;
+    font-stretch: wider;
+    letter-spacing: 8px;
+    margin: 20px;
 }
 
-h2 {  
-font-size: 50px;
-color: white;
+h2 {
+    font-size: 50px;
+    color: white;
 }
-h3 {
-    
-}
+
 tr {
     font-size: 20pt;
     width: 100px;
     height: 50px;
 }
+
 input {
     width: 20px;
     height: 20px;
 }
+
 button {
     width: 120px;
     height: 50px;
     font-size: 20px;
-    font-family:'Amiko', sans-serif;
+    font-family: 'Amiko', sans-serif;
 }
+
 .larger {
     width: 50px;
     height: 50px;
 }
 
 .center {
-text-align: center;
+    text-align: center;
 }
+
 .linie {
     width: auto;
     height: 2pt;
@@ -85,27 +88,32 @@ text-align: center;
     margin: 0px;
     margin-top: 10pt;
 }
+
 button {
     border-color: white;
 }
+
 .bold {
     font-weight: bold;
-    font-size: 20px ;
+    font-size: 20px;
 }
+
 .underline {
     font-size: 20pt;
     text-decoration: underline;
     padding-bottom: 10pt;
 }
+
 .ergebnisse {
     font-size: 30px;
 }
 
 @-webkit-keyframes glow {
-from {
-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-}
-to {
-text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-}
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
 }
