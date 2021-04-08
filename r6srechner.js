@@ -19,9 +19,6 @@ function setTwoNumberDecimal(el) {
 
 function rechnen() {
 
-    <
-    !--Verteidiger-- >
-
     if (document.getElementById("mute").checked == true)
         geld = geld + 1000;
     if (document.getElementById("smoke").checked == true)
@@ -81,8 +78,7 @@ function rechnen() {
     if (document.getElementById("aruni").checked == true)
         geld = geld + 25000;
 
-    <
-    !--Angreifer-- >
+
 
     if (document.getElementById("sledge").checked == true)
         geld = geld + 1000;
