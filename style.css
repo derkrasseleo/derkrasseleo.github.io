@@ -113,6 +113,8 @@ button {
 
 .navbar {
     font-size: 50px;
+    align-items: center;
+    align-self: center;
 }
 
 @-webkit-keyframes glow {
