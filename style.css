@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-image: url('gradient-small.png');
     background-repeat: no-repeat;
@@ -106,6 +109,10 @@ button {
 
 .ergebnisse {
     font-size: 30px;
+}
+
+.navbar {
+    font-size: 50px;
 }
 
 @-webkit-keyframes glow {
