@@ -1,6 +1,6 @@
 {
     "!root-password": "1234",
-    "audio": piepwire,
+    "audio": pipewire,
     "bootloader": "systemd-bootctl",
     "filesystem": "btrfs",
     "harddrive": {
@@ -19,7 +19,7 @@
     "nic": {
         "NetworkManager": true
     },
-    "packages": [git firefox],
+    "packages": [git],
     "profile": null,
     "superusers": {
         "leo": {
