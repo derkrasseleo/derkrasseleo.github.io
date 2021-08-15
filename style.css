@@ -46,21 +46,22 @@ hr {
 }
 tr {
     font-size: 5pt;
-    width: 100vmin;
-    height: 50vmin;
+    height: 5vmin; 
 }
 input {
     width: 5vmin;
     height: 5vmin;
+    color: white;
 }
 button {
-    width: 25vmin;
-    height: 10vmin;
-    font-size: 5vmin;
+    width: 20vmin;
+    height: 5vmin;
+    font-size: 3vmin;
     font-family: 'Amiko', sans-serif;
 }
 label {
     font-size: 2vmin;
+    color: white;
 }
 .larger {
     width: 10vmin;
@@ -79,11 +80,12 @@ label {
     font-size: 20vmin;
 }
 .underline {
-    font-size: 20pt;
+    font-size: 3vmin;
     text-decoration: underline;
+    color: white;
 }
 .ergebnisse {
-    font-size: 10vmin;
+    font-size: 3vmin;
 }
 .navbar > div {
     font-size: 1vmin;
