@@ -8,7 +8,7 @@ function wielangenoch() {
 
     var currentTime = new Date();
     var timeRemaining = ((1 / (sizeRemaining / 1000)) * dlSpeed);
-    var timeDone = new Date(Date.now() - timeRemaining);
+    var timeDone = new Date(currentTime - timeRemaining);
 
     document.getElementById("remaining").innerHTML =
         "It will take " + (timeRemaining / 60 / 60).toFixed(2) +
