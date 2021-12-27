@@ -1,5 +1,5 @@
 body {
-    background-color: lightslategray;
+    background-color: black;
     /* background-image: url('gradient-small.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 }
 h1 {
     font-size: 10vmin;
-    color: rgb(255, 255, 255);
+    color: white;
     /* font-stretch: wider; */
     letter-spacing: 2vmin;
     margin: 5vmin;
@@ -29,10 +29,11 @@ p {
 a {
     font-family: 'Amiko', sans-serif;
     font-size: 2vmin;
+    color: white;
 }
 a:link,
 a:visited {
-    color: blanchedalmond;
+    color: white;
     background-color: transparent;
     text-decoration: underline;
 }
@@ -53,12 +54,17 @@ input {
     height: 5vmin;
     color: black;
     size: 10pt;
+    border-radius: 0.5rem;
 }
 button {
     width: 20vmin;
     height: 5vmin;
     font-size: 3vmin;
     font-family: 'Amiko', sans-serif;
+    border-radius: 0.5rem;
+    border-width: 0rem;
+    background: darkslategray;
+    color: white;
 }
 label {
     font-size: 2vmin;
@@ -93,29 +99,14 @@ label {
     padding: 2vmin;
     margin-left: auto;
     display: inline-block;
-    display: inline; /* For IE7 */
     zoom: 1; /* Trigger hasLayout */
     width: 33%;
     text-align: center;
     
 }
-.tools {
-    padding: 1%;
-    
-}
-.glow {
-    color: #ffffff;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
 
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 1vmin rgb(167, 167, 167), 0 0 2vmin #fff, 0 0 3vmin blanchedalmond, 0 0 4vmin blanchedalmond;
-    }
-
-    to {
-        text-shadow: 0 0 2vmin rgb(150, 150, 150), 0 0 3vmin blanchedalmond, 0 0 4vmin blanchedalmond;
-    }
+.toolsList {
+    font-size: 10vmin;
+    text-align: center;
+}
 }
