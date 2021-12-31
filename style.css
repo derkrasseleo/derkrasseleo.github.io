@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     background-color: black;
     /* background-image: url('gradient-small.png');
@@ -108,5 +112,4 @@ label {
 .toolsList {
     font-size: 10vmin;
     text-align: center;
-}
 }
