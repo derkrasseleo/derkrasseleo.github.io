@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build-css": "tailwindcss build -i ./src.css -o ./dist/output.css"
+    "build-css": "tailwindcss build -i ./src.css -o ./dist/output.css",
+    "bundle": "browserify js/webuntisapitest.js -o js/bundle.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.8"
