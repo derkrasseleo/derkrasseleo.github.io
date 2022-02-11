@@ -55,19 +55,19 @@ function rechnen() {
     if (document.getElementById("maestro").checked == true)
         geld += 10000;
     if (document.getElementById("alibi").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("clash").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("kaid").checked == true)
-        geld += 15000;
-    if (document.getElementById("mozzy").checked == true)
+        geld += 10000;
+    if (document.getElementById("mozzie").checked == true)
         geld += 15000;
     if (document.getElementById("warden").checked == true)
         geld += 15000;
     if (document.getElementById("goyo").checked == true)
         geld += 15000;
     if (document.getElementById("wamai").checked == true)
-        geld += 20000;
+        geld += 15000;
     if (document.getElementById("oryx").checked == true)
         geld += 20000;
     if (document.getElementById("melusi").checked == true)
@@ -118,13 +118,13 @@ function rechnen() {
     if (document.getElementById("dokkaebi").checked == true)
         geld += 10000;
     if (document.getElementById("lion").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("finka").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("maverick").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("nomad").checked == true)
-        geld += 15000;
+        geld += 10000;
     if (document.getElementById("gridlock").checked == true)
         geld += 15000;
     if (document.getElementById("nokk").checked == true)
@@ -132,7 +132,7 @@ function rechnen() {
     if (document.getElementById("amaru").checked == true)
         geld += 15000;
     if (document.getElementById("kali").checked == true)
-        geld += 20000;
+        geld += 15000;
     if (document.getElementById("iana").checked == true)
         geld += 20000;
     if (document.getElementById("ace").checked == true)
@@ -146,7 +146,7 @@ function rechnen() {
 
     geld -= document.getElementById("ansehen").value;
     
-    games = geld / 200;
+    games = geld / 250;
     time = games * 15 / 60;
     timeDays = (time / 24).toFixed(2);
     daysRealisticlyisticly = time / 2;
