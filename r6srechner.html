@@ -2,176 +2,368 @@
 <html>
 <header>
     <link rel="stylesheet" type="text/css" href="./dist/output.css">
-    <title>R6S-Rechner</title>
+    <title>R6S-Calculator</title>
 </header>
 
-<body class="dark:bg-black dark:text-white pl-4">
-    <script src="js/r6srechner.js"></script>
-    <h1 class="text-3xl leading-loose font-bold">R6S-Rechner V1.0</h1>
-    <ul class="list-disc pl-12">
-        <li class="text-xl">Haken Sie jene Operator an, die Sie noch nicht besitzen, um die verbleibende Spielzeit berechnen.</li>
-        <li class="text-xl leading-loose">Es wird mit einer Durchschnittszeit von 15 Minuten pro Spiel und einem durchschnittlichem Gewinn von 250 Ansehen gerechnet.</li>    
-    </ul>
-    <div>
+<style>
+    input[type="checkbox"] {
+    display: none;
+    }
 
-        <table class="border-2 m-4 p-4">
-                <th class="underline leading-loose text-xl">Verteidiger</th>
-                <tr><td>
-                    <input type="checkbox" id="mute" name="mute">
-                    <label for="mute">Mute</label>
-                    <input type="checkbox" id="smoke" name="smoke">
-                    <label for="mute">Smoke</label>
-                    <input type="checkbox" id="castle" name="castle">
-                    <label for="castle">Castle</label>
-                    <input type="checkbox" id="pulse" name="pulse">
-                    <label for="pulse">Pulse</label>
-                    <input type="checkbox" id="doc" name="doc">
-                    <label for="doc">Doc</label>
-                    <input type="checkbox" id="rook" name="rook">
-                    <label for="rook">Rook</label>
-                    <input type="checkbox" id="kapkan" name="kapkan">
-                    <label for="kapan">Kapkan</label>
-                </td></tr>
-                <tr><td>
-                    <input type="checkbox" id="tachanka" name="tachanka">
-                    <label for="tachanka">Tachanka</label>
-                    <input type="checkbox" id="jaeger" name="jaeger">
-                    <label for="jaeger">Jäger</label>
-                    <input type="checkbox" id="bandit" name="bandit">
-                    <label for="bandit">Bandit</label>
-                    <input type="checkbox" id="frost" name="frost">
-                    <label for="frost">Frost</label>
-                    <input type="checkbox" id="valkyrie" name="valkyrie">
-                    <label for="valkyrie">Valkyrie</label>
-                    <input type="checkbox" id="cavaira" name="cavaira">
-                    <label for="cavaira">Cavaira</label>
-                    <input type="checkbox" id="echo" name="echo">
-                    <label for="echo">Echo</label>
-                </tr></td>
-                <tr><td>
-                    <input type="checkbox" id="mira" name="mira">
-                    <label for="mira">Mira</label>
-                    <input type="checkbox" id="lesion" name="lesion">
-                    <label for="lesion">Lesion</label>
-                    <input type="checkbox" id="ela" name="ela">
-                    <label for="ela">Ela</label>
-                    <input type="checkbox" id="vigil" name="vigil">
-                    <label for="vigil">Vigil</label>
-                    <input type="checkbox" id="maestro" name="maestro">
-                    <label for="maestro">Maestro</label>
-                    <input type="checkbox" id="alibi" name="alibi">
-                    <label for="alibi">Alibi</label>
-                    <input type="checkbox" id="clash" name="clash">
-                    <label for="clash">Clash</label>
-                </tr></td>
-                <tr><td>
-                    <input type="checkbox" id="kaid" name="kaid">
-                    <label for="kaid">Kaid</label>
-                    <input type="checkbox" id="mozzy" name="mozzy">
-                    <label for="mozzy">Mozzy</label>
-                    <input type="checkbox" id="warden" name="warden">
-                    <label for="warden">Warden</label>
-                    <input type="checkbox" id="goyo" name="goyo">
-                    <label for="goyo">Goyo</label>
-                    <input type="checkbox" id="wamai" name="wamai">
-                    <label for="wamai">Wamai</label>
-                    <input type="checkbox" id="oryx" name="oryx">
-                    <label for="oryx">Oryx</label>
-                    <input type="checkbox" id="melusi" name="melusi">
-                    <label for="melusi">Melusi</label>
-                </tr></td>
-                <tr><td>
-                    <input type="checkbox" id="aruni" name="aruni">
-                    <label for="aruni">Aruni</label>
-                </tr></td>
+    label {
+    border: 0.5px solid #fff;
+    padding: 2px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    }
+
+    label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 0.5px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    /* line-height: 28px; */
+    transition-duration: 0.2s;
+    transform: scale(0);
+    }
+
+    label img {
+    height: 100px;
+    width: 100px;
+    transition-duration: 0.1s;
+    transform-origin: 50% 50%;
+    }
+
+    :checked + label {
+    border-color: #ddd;
+    }
+
+    :checked + label:before {
+    content: "✓";
+    background-color: green;
+    transform: scale(1);
+    align-self: center;
+    }
+
+    :checked + label img {
+    transform: scale(0.9);
+    box-shadow: 50 50 50px rgb(148, 148, 148);
+    z-index: -1;
+    }
+    td
+    {
+        width:14.29%;
+        text-align: center;
+    }
+</style>
+
+<body class="dark:bg-black dark:text-white pl-8 pt-4">
+    <script src="js/r6srechner.js"></script>
+    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.1.1</h1>
+    <ul class="list-disc pl-10">
+        <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock all operators.</li>
+        <li class="text-xl">The time is calculating by assuming one game takes about 15 minutes and you recieve 200 credits for each game.</li>    
+        <li class="text-xl">Last updated: 11.02.2022</li>
+    </ul>
+
+    <p class="text-xl pt-4 pb-4">I currently have 
+    <input type="number" id="ansehen" class="border-2 m-2 p-2 text-xl bg-black" value="0">
+    credits (optional)</p>
+
+    <div class=" ">
+        <table class="border-4 bg-slate-800">
+                <th class="leading-loose text-2xl">Defenders</th>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="mute" name="mute">
+                        <label for="mute"><img src="operators/mute.svg"> Mute</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="smoke" name="smoke">
+                        <label for="smoke"><img src="operators/smoke.svg"> Smoke</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="castle" name="castle">
+                        <label for="castle"><img src="operators/castle.svg">Castle</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="pulse" name="pulse">
+                        <label for="pulse"><img src="operators/pulse.svg">Pulse</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="doc" name="doc">
+                        <label for="doc"><img src="operators/doc.svg">Doc</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="rook" name="rook">
+                        <label for="rook"><img src="operators/rook.svg">Rook</label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" id="kapkan" name="kapkan">
+                        <label for="kapkan"><img src="operators/kapkan.svg">Kapkan</label>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="tachanka" name="tachanka">
+                        <label for="tachanka"><img src="operators/tachanka.svg">Tachanka</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="jaeger" name="jaeger">
+                        <label for="jaeger"><img src="operators/jager.svg">Jäger</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="bandit" name="bandit">
+                        <label for="bandit"><img src="operators/bandit.svg">Bandit</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="frost" name="frost">
+                        <label for="frost"><img src="operators/frost.svg">Frost</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="valkyrie" name="valkyrie">
+                        <label for="valkyrie"><img src="operators/valkyrie.svg">Valkyrie</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="cavaira" name="cavaira">
+                        <label for="cavaira"><img src="operators/caveira.svg">Cavaira</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="echo" name="echo">
+                        <label for="echo"><img src="operators/echo.svg">Echo</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="mira" name="mira">
+                        <label for="mira"><img src="operators/mira.svg">Mira</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="lesion" name="lesion">
+                        <label for="lesion"><img src="operators/lesion.svg">Lesion</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ela" name="ela">
+                        <label for="ela"><img src="operators/ela.svg">Ela</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="vigil" name="vigil">
+                        <label for="vigil"><img src="operators/vigil.svg">Vigil</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="maestro" name="maestro">
+                        <label for="maestro"><img src="operators/maestro.svg">Maestro</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="alibi" name="alibi">
+                        <label for="alibi"><img src="operators/alibi.svg">Alibi</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="clash" name="clash">
+                        <label for="clash"><img src="operators/clash.svg">Clash</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="kaid" name="kaid">
+                        <label for="kaid"><img src="operators/kaid.svg">Kaid</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="mozzy" name="mozzy">
+                        <label for="mozzy"><img src="operators/mozzie.svg">Mozzy</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="warden" name="warden">
+                        <label for="warden"><img src="operators/warden.svg">Warden</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="goyo" name="goyo">
+                        <label for="goyo"><img src="operators/goyo.svg">Goyo</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="wamai" name="wamai">
+                        <label for="wamai"><img src="operators/wamai.svg">Wamai</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="oryx" name="oryx">
+                        <label for="oryx"><img src="operators/oryx.svg">Oryx</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="melusi" name="melusi">
+                        <label for="melusi"><img src="operators/melusi.svg">Melusi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="aruni" name="aruni">
+                        <label for="aruni"><img src="operators/aruni.svg">Aruni</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="thunderbird" name="thunderbird">
+                        <label for="thunderbird"><img src="operators/thunderbird.svg">Thunderbird</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="thorn" name="thorn">
+                        <label for="thorn"><img src="operators/thorn.svg">Thorn</label>
+                    </td>
+                </tr>
         </table>  
         <br>
-        <table class="border-2 m-4 p-4">
-            <th class="underline leading-loose text-xl">Angreifer</th>
-            <tr><td>
-                <input type="checkbox" id="sledge" name="sledge">
-                <label for="sledge">Sledge</label>
-                <input type="checkbox" id="thatcher" name="thatcher">
-                <label for="thatcher">Thatcher</label>
-                <input type="checkbox" id="ash" name="ash">
-                <label for="ash">Ash</label>
-                <input type="checkbox" id="thermite" name="thermite">
-                <label for="thermite">Thermite</label>
-                <input type="checkbox" id="twitch" name="twitch">
-                <label for="twitch">Twitch</label>
-                <input type="checkbox" id="montagne" name="montagne">
-                <label for="montagne">Montagne</label>
-                <input type="checkbox" id="glaz" name="glaz">
-                <label for="glaz">Glaz</label>
-            </td></tr>
-            <tr><td>
-                <input type="checkbox" id="fuze" name="fuze">
-                <label for="fuze">Fuze</label>
-                <input type="checkbox" id="blitz" name="blitz">
-                <label for="blitz">Blitz</label>
-                <input type="checkbox" id="iq" name="iq">
-                <label for="iq">IQ</label>
-                <input type="checkbox" id="buck" name="buck">
-                <label for="buck">Buck</label>
-                <input type="checkbox" id="blackbeard" name="blackbeard">
-                <label for="blackbeard">Blackbeard</label>
-                <input type="checkbox" id="capitao" name="capitao">
-                <label for="capitao">Capitao</label>
-                <input type="checkbox" id="hibana" name="hibana">
-                <label for="hibana">Hibana</label>
-            </tr></td>
-            <tr><td>
-                <input type="checkbox" id="jackal" name="jackal">
-                <label for="jackal">Jackal</label>
-                <input type="checkbox" id="ying" name="ying">
-                <label for="ying">Ying</label>
-                <input type="checkbox" id="zofia" name="zofia">
-                <label for="zofia">Zofia</label>
-                <input type="checkbox" id="dokkaebi" name="dokkaebi">
-                <label for="dokkaebi">Dokkaebi</label>
-                <input type="checkbox" id="lion" name="lion">
-                <label for="lion">Lion</label>
-                <input type="checkbox" id="finka" name="finka">
-                <label for="finka">Finka</label>
-                <input type="checkbox" id="maverick" name="maverick">
-                <label for="maverick">Maverick</label>
-            </tr></td>
-            <tr><td>
-                <input type="checkbox" id="nomad" name="nomad">
-                <label for="nomad">Nomad</label>
-                <input type="checkbox" id="gridlock" name="gridlock">
-                <label for="gridlock">Gridlock</label>
-                <input type="checkbox" id="nokk" name="nokk">
-                <label for="nokk">Nokk</label>
-                <input type="checkbox" id="amaru" name="amaru">
-                <label for="amaru">Amaru</label>
-                <input type="checkbox" id="kali" name="kali">
-                <label for="kali">Kali</label>
-                <input type="checkbox" id="iana" name="iana">
-                <label for="iana">Iana</label>
-                <input type="checkbox" id="ace" name="ace">
-                <label for="ace">Ace</label>
-            </tr></td>
-            <tr><td>
-                <input type="checkbox" id="zero" name="zero">
-                <label for="zero">Zero</label>
-                <input type="checkbox" id="flores" name="flores">
-                <label for="flores">Flores</label>
-            </tr></td>
-        </tr>
-    </table>
-</div>
-    <button class="mt-4 mb-4 p-1.5 font-bold border-2 border-white rounded-md bg-slate-800 leading-loose" id="berechnen" type="submit" value="Berechnen" onclick="rechner()">Berechnen</button>        
-
-    <table class="p-1.5 m-4">
-        <tr>
-            <td>
-                <p class="ergebnisse" id="spiele"></p>
-                <p class="ergebnisse" id="geld"></p>
-                <p class="ergebnisse" id="zeit"></p>
-            </td>
+        <table class="border-4 bg-slate-800">
+            <th class="leading-loose text-2xl">Attackers</th>
+            <tr>
+                <td>
+                    <input type="checkbox" id="sledge" name="sledge">
+                    <label for="sledge"><img src="operators/sledge.svg">Sledge</label>    
+                </td>
+                <td>
+                    <input type="checkbox" id="thatcher" name="thatcher">
+                    <label for="thatcher"><img src="operators/thatcher.svg">Thatcher</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="ash" name="ash">
+                    <label for="ash"><img src="operators/ash.svg">Ash</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="thermite" name="thermite">
+                    <label for="thermite"><img src="operators/thermite.svg">Thermite</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="twitch" name="twitch">
+                    <label for="twitch"><img src="operators/twitch.svg">Twitch</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="montagne" name="montagne">
+                    <label for="montagne"><img src="operators/montagne.svg">Montagne</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="glaz" name="glaz">
+                    <label for="glaz"><img src="operators/glaz.svg">Glaz</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="fuze" name="fuze">
+                    <label for="fuze"><img src="operators/fuze.svg">Fuze</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="blitz" name="blitz">
+                    <label for="blitz"><img src="operators/blitz.svg">Blitz</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="iq" name="iq">
+                    <label for="iq"><img src="operators/iq.svg">IQ</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="buck" name="buck">
+                    <label for="buck"><img src="operators/buck.svg">Buck</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="blackbeard" name="blackbeard">
+                    <label for="blackbeard"><img src="operators/blackbeard.svg">Blackbeard</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="capitao" name="capitao">
+                    <label for="capitao"><img src="operators/capitao.svg">Capitão</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="hibana" name="hibana">
+                    <label for="hibana"><img src="operators/hibana.svg">Hibana</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="jackal" name="jackal">
+                    <label for="jackal"><img src="operators/jackal.svg">Jackal</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="ying" name="ying">
+                    <label for="ying"><img src="operators/ying.svg">Ying</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="zofia" name="zofia">
+                    <label for="zofia"><img src="operators/zofia.svg">Zofia</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="dokkaebi" name="dokkaebi">
+                    <label for="dokkaebi"><img src="operators/dokkaebi.svg">Dokkaebi</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="lion" name="lion">
+                    <label for="lion"><img src="operators/lion.svg">Lion</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="finka" name="finka">
+                    <label for="finka"><img src="operators/finka.svg">Finka</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="maverick" name="maverick">
+                    <label for="maverick"><img src="operators/maverick.svg">Maverick</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="nomad" name="nomad">
+                    <label for="nomad"><img src="operators/nomad.svg">Nomad</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="gridlock" name="gridlock">
+                    <label for="gridlock"><img src="operators/gridlock.svg">Gridlock</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="nokk" name="nokk">
+                    <label for="nokk"><img src="operators/nokk.svg">Nokk</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="amaru" name="amaru">
+                    <label for="amaru"><img src="operators/amaru.svg">Amaru</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="kali" name="kali">
+                    <label for="kali"><img src="operators/kali.svg">Kali</label>                   
+                </td>
+                <td>
+                    <input type="checkbox" id="iana" name="iana">
+                    <label for="iana"><img src="operators/iana.svg">Iana</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="ace" name="ace">
+                    <label for="ace"><img src="operators/ace.svg">Ace</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="zero" name="zero">
+                    <label for="zero"><img src="operators/zero.svg">Zero</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="flores" name="flores">
+                    <label for="flores"><img src="operators/flores.svg">Flores</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="osa" name="osa">
+                    <label for="osa"><img src="operators/osa.svg">Osa</label>
+                </td>
+            </tr>
         </tr>
     </table>
     </div>
+        <button class="mt-4 mb-4 p-2 font-bold border-2 border-white rounded-md bg-slate-800 leading-loose white:text-white" id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
+    </div>
+    <footer>
+        <hr>
+          All Icons Copyright © 2020 Marco Vockner</footer>
 </body>
 </html>
