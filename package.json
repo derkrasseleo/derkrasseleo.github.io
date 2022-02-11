@@ -1,9 +1,14 @@
 {
+  "homepage": "http://leochras.github.io/leochras.github.io",
   "scripts": {
+    "build": "",
     "build-css": "tailwindcss build -i ./src.css -o ./dist/output.css",
-    "bundle": "browserify js/webuntisapitest.js -o js/bundle.js"
+    "bundle": "browserify js/webuntisapitest.js -o js/bundle.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "tailwindcss": "^3.0.8"
   }
 }
