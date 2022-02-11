@@ -156,5 +156,5 @@ function rechnen() {
     //document.getElementById("time").innerHTML = "oder " + time + " Stunden bzw. " + timeDays + " Tage durchgehend gamesn";
     //document.getElementById("timeReal").innerHTML = "oder für " + daysRealisticlyisticly + " Tage 2h lang gamesn";
 
-    alert("You have to play " + games + " more games \n  earn " + geld + " credits \n  play for " + time + " hours  " + timeDays + " days straight \n or play " + daysRealisticlyisticly + " days for 2 hours each day");    
+    alert("You have to play " + games + " more games \nearn " + geld + "credits \nplay for " + time + " hours " + timeDays + " days straight \nor play " + daysRealisticlyisticly + " days for 2 hours each day");    
 }
