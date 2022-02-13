@@ -3,21 +3,22 @@
 <head>
     <title>How long until my Download is finished?</title>
     <script src="js/downloadtime.js"></script>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="dist/output.css">
 </head>
 
-<body>
+<body class="dark:bg-black text-green-400 m-4 text-center">
     <h2>How long until my download is finished?</h2>
-    <p>Keep in mind: 10 Mbps = 1,25 MB/s</p>
-    <h3>Size of download in GB:</h3>
-    <input style="width: auto;" type="number" name="downloadSize" id="dlSize">
-    <h3>Already downloaded:</h3>
-    <input style="width: auto;" type="number" name="currentSize" id="crSize">
-    <h3>Speed in Mbps:</h3>
-    <input style="width: auto;" type="number" name="downloadSpeed" id="dlSpeed">
-    <br></br>
-    <button onclick="wielangenoch(dlSize,dlSpeed)">Calculate</button>
-    <hr style="width: auto;">
+    <p class="font-bold pt-2 pb-2">Keep in mind: 10 Mbps = 1,25 MB/s</p>
+    <div class="p-4">
+        <h3>Size of download in GB:</h3>
+        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" stwidth: auto;" type="number" name="downloadSize" id="dlSize">
+        <h3>Already downloaded:</h3>
+        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="currentSize" id="crSize">
+        <h3>Speed in Mbps:</h3>
+        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="downloadSpeed" id="dlSpeed">
+    </div>
+    <button class="border-2 rounded-xl m-4 p-2" onclick="wielangenoch(dlSize,dlSpeed)">Calculate</button>
+    <hr style="width: auto" class="p-2">
     <p id="remaining"></p>
     <p id="current"></p>
 

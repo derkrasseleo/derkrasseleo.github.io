@@ -5,84 +5,23 @@
     <title>R6S-Calculator</title>
 </header>
 
-<style>
-    input[type="checkbox"] {
-    display: none;
-    }
-
-    label {
-    border: 0.5px solid #fff;
-    padding: 2px;
-    display: block;
-    position: relative;
-    margin: 10px;
-    cursor: pointer;
-    }
-
-    label:before {
-    background-color: white;
-    color: white;
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    border: 0.5px solid grey;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    /* line-height: 28px; */
-    transition-duration: 0.2s;
-    transform: scale(0);
-    }
-
-    label img {
-    height: 100px;
-    width: 100px;
-    transition-duration: 0.1s;
-    transform-origin: 50% 50%;
-    }
-
-    :checked + label {
-    border-color: #ddd;
-    }
-
-    :checked + label:before {
-    content: "✓";
-    background-color: green;
-    transform: scale(1);
-    align-self: center;
-    }
-
-    :checked + label img {
-    transform: scale(0.9);
-    box-shadow: 50 50 50px rgb(148, 148, 148);
-    z-index: -1;
-    }
-    td
-    {
-        width:14.29%;
-        text-align: center;
-    }
-</style>
-
-<body class="dark:bg-black dark:text-white pl-8 pt-4">
-    <script src="js/r6srechner.js"></script>
-    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.1.1</h1>
+<body class="dark:bg-black text-green-400 pl-8 pt-4 pr-8">
+    <script src="js/r6scalculator.js"></script>
+    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.1.2</h1>
     <ul class="list-disc pl-10">
-        <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock all operators.</li>
-        <li class="text-xl">The time is calculating by assuming one game takes about 15 minutes and you recieve 250 renown for each game.</li>    
-        <li class="text-xl">Last updated: 11.02.2022</li>
+        <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock the selected operators.</li>
+        <li class="text-xl">The time is calculated by assuming one game takes about 15 minutes and you recieve 250 renown for each game.</li>    
+        <li class="text-xl">Last updated: 13.02.2022</li>
     </ul>
 
     <p class="text-xl pt-4 pb-4">I currently have 
-    <input type="number" id="ansehen" class="border-2 m-2 p-2 text-xl bg-black" value="0">
+    <input type="number" id="ansehen" class="border-2 m-2 p-2 text-xl text-center text-green-400 dark:bg-black" value="0">
     renown (optional)</p>
 
-    <div class=" ">
-        <table class="border-4 bg-slate-800">
-                <th class="leading-loose text-2xl">Defenders</th>
+    <div>
+        <table class="border-collapse border-4 border-pink-500">
+                <th class="text-pink-500 text-2xl border-pink-500 rounded-br-md p-4">Defenders</th>
+                <tr class="border-4 border-pink-500"></tr>
                 <tr>
                     <td>
                         <input type="checkbox" id="mute" name="mute">
@@ -221,8 +160,9 @@
                 </tr>
         </table>  
         <br>
-        <table class="border-4 bg-slate-800">
-            <th class="leading-loose text-2xl">Attackers</th>
+        <table class="border-collapse border-4 border-pink-500">
+            <th class="text-pink-500 text-2xl border-pink-500 rounded-br-md p-4">Attackers</th>
+            <tr class="border-4 border-pink-500"></tr>
             <tr>
                 <td>
                     <input type="checkbox" id="sledge" name="sledge">
@@ -360,7 +300,7 @@
         </tr>
     </table>
     </div>
-        <button class="mt-4 mb-4 p-2 font-bold border-2 border-white rounded-md bg-slate-800 leading-loose white:text-white" id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
+        <button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
     </div>
     <footer>
         <hr>

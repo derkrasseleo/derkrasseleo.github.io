@@ -2,10 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-
+h1 {
+    @apply text-pink-500 font-bold text-7xl leading-loose drop-shadow-lg;
+}
 h2 {
     @apply text-center text-3xl font-bold text-pink-500 space-y-80 leading-loose drop-shadow-lg;
 }
 a {
     @apply text-green-400 hover:underline hover:text-green-500 hover:bg-green-100 dark:hover:bg-green-900;
 }
+input {
+    @apply text-black;
+}
+
+input[type="checkbox"] {
+    display: none;
+    }
+
+    label {
+    @apply  m-2 p-2 border-2 border-green-500;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    }
+
+    label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 1.75rem;
+    text-align: center;
+    /* line-height: 28px; */
+    transition-duration: 0.2s;
+    transform: scale(0);
+    }
+
+    label img {
+    height: 8rem;
+    width: 8rem;
+    transition-duration: 0.1s;
+    transform-origin: 50% 50%;
+    }
+
+    :checked + label {
+    @apply border-pink-500;
+    }
+
+    :checked + label:before {
+    content: "✓";
+    background-color: green;
+    transform: scale(1);
+    align-self: center;
+    }
+
+    :checked + label img {
+    transform: scale(0.9);
+    z-index: -1;
+    }
+    td
+    {
+        width:14.29%;
+        text-align: center;
+    }
