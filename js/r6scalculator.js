@@ -23,6 +23,7 @@ function calculate() {
 }
 
 function updateOperatorItem() {
+    localStorage.setItem("operators", "");
     checkedCheckboxes = document.querySelectorAll('input:checked');
     checkedCheckboxes.forEach(b => {
         if(b==checkedCheckboxes[0])
@@ -75,8 +76,6 @@ function deselectAll() {
     
 
 function rechnen() {
-
-    localStorage.setItem("operators", "");
 
     //Defeneders
 
