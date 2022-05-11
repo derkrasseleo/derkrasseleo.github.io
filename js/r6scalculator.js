@@ -21,11 +21,21 @@ function calculate() {
         rechnen();
     }
 }
+
+function updateOperatorItem() {
+    localStorage.setItem("operators", "");
+    checkedCheckboxes = document.querySelectorAll('input:checked');
+    checkedCheckboxes.forEach(b => {
+        if(b==checkedCheckboxes[0])
+            localStorage.setItem("operators", (localStorage.getItem("operators") + b.id));
+        else
+            localStorage.setItem("operators", (localStorage.getItem("operators") + "," + b.id));
+    });
+}
     
 function exportCSV() {
 
-    const checkboxes = document.querySelectorAll('input:checked');
-    console.log(checkboxes);
+    updateOperatorItem();
 
     var encodedUri = encodeURI(csvContent);
     var link = document.createElement("a");
@@ -66,8 +76,6 @@ function deselectAll() {
     
 
 function rechnen() {
-
-    localStorage.setItem("operators", "");
 
     //Defeneders
 
@@ -199,13 +207,7 @@ function rechnen() {
     if (document.getElementById("osa").checked == true)
         renown += 25000;
 
-    checkedCheckboxes = document.querySelectorAll('input:checked');
-    checkedCheckboxes.forEach(b => {
-        if(b==checkedCheckboxes[0])
-            localStorage.setItem("operators", (localStorage.getItem("operators") + b.id));
-        else
-            localStorage.setItem("operators", (localStorage.getItem("operators") + "," + b.id));
-    });
+    updateOperatorItem();
 
     renown -= document.getElementById("ansehen").value; 
     games = (renown / 239).toFixed(2);
