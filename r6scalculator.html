@@ -5,13 +5,13 @@
     <title>R6S-Calculator</title>
 </header>
 
-<body class="dark:bg-black text-green-400 pl-8 pt-4 pr-8">
+<body onload="getAndSetProperties()" class="dark:bg-black text-green-400 pl-8 pt-4 pr-8">
     <script src="js/r6scalculator.js"></script>
-    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.1.2</h1>
+    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.2</h1>
     <ul class="list-disc pl-10">
         <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock the selected operators.</li>
-        <li class="text-xl">The time is calculated by assuming one game takes about 15 minutes and you recieve 250 renown for each game.</li>    
-        <li class="text-xl">Last updated: 13.02.2022</li>
+        <li class="text-xl">The time is calculated by assuming one game takes about 15 minutes and you recieve 239 renown for each game.</li>    
+        <li class="text-xl">Last updated: 11.05.2022</li>
     </ul>
 
     <p class="text-xl pt-4 pb-4">I currently have 
@@ -24,137 +24,137 @@
                 <tr class="border-4 border-pink-500"></tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="mute" name="mute">
+                        <input type="checkbox" id="mute" name="r6operator.mute">
                         <label for="mute"><img src="operators/mute.svg"> Mute</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="smoke" name="smoke">
+                        <input type="checkbox" id="smoke" name="r6operator.smoke">
                         <label for="smoke"><img src="operators/smoke.svg"> Smoke</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="castle" name="castle">
+                        <input type="checkbox" id="castle" name="r6operator.castle">
                         <label for="castle"><img src="operators/castle.svg">Castle</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="pulse" name="pulse">
+                        <input type="checkbox" id="pulse" name="r6operator.pulse">
                         <label for="pulse"><img src="operators/pulse.svg">Pulse</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="doc" name="doc">
+                        <input type="checkbox" id="doc" name="r6operator.doc">
                         <label for="doc"><img src="operators/doc.svg">Doc</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="rook" name="rook">
+                        <input type="checkbox" id="rook" name="r6operator.rook">
                         <label for="rook"><img src="operators/rook.svg">Rook</label>
                     </td>
 
                     <td>
-                        <input type="checkbox" id="kapkan" name="kapkan">
+                        <input type="checkbox" id="kapkan" name="r6operator.kapkan">
                         <label for="kapkan"><img src="operators/kapkan.svg">Kapkan</label>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="tachanka" name="tachanka">
+                        <input type="checkbox" id="tachanka" name="r6operator.tachanka">
                         <label for="tachanka"><img src="operators/tachanka.svg">Tachanka</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="jaeger" name="jaeger">
+                        <input type="checkbox" id="jaeger" name="r6operator.jaeger">
                         <label for="jaeger"><img src="operators/jager.svg">Jäger</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="bandit" name="bandit">
+                        <input type="checkbox" id="bandit" name="r6operator.bandit">
                         <label for="bandit"><img src="operators/bandit.svg">Bandit</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="frost" name="frost">
+                        <input type="checkbox" id="frost" name="r6operator.frost">
                         <label for="frost"><img src="operators/frost.svg">Frost</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="valkyrie" name="valkyrie">
+                        <input type="checkbox" id="valkyrie" name="r6operator.valkyrie">
                         <label for="valkyrie"><img src="operators/valkyrie.svg">Valkyrie</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="cavaira" name="cavaira">
+                        <input type="checkbox" id="cavaira" name="r6operator.cavaira">
                         <label for="cavaira"><img src="operators/caveira.svg">Cavaira</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="echo" name="echo">
+                        <input type="checkbox" id="echo" name="r6operator.echo">
                         <label for="echo"><img src="operators/echo.svg">Echo</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="mira" name="mira">
+                        <input type="checkbox" id="mira" name="r6operator.mira">
                         <label for="mira"><img src="operators/mira.svg">Mira</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="lesion" name="lesion">
+                        <input type="checkbox" id="lesion" name="r6operator.lesion">
                         <label for="lesion"><img src="operators/lesion.svg">Lesion</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="ela" name="ela">
+                        <input type="checkbox" id="ela" name="r6operator.ela">
                         <label for="ela"><img src="operators/ela.svg">Ela</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="vigil" name="vigil">
+                        <input type="checkbox" id="vigil" name="r6operator.vigil">
                         <label for="vigil"><img src="operators/vigil.svg">Vigil</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="maestro" name="maestro">
+                        <input type="checkbox" id="maestro" name="r6operator.maestro">
                         <label for="maestro"><img src="operators/maestro.svg">Maestro</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="alibi" name="alibi">
+                        <input type="checkbox" id="alibi" name="r6operator.alibi">
                         <label for="alibi"><img src="operators/alibi.svg">Alibi</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="clash" name="clash">
+                        <input type="checkbox" id="clash" name="r6operator.clash">
                         <label for="clash"><img src="operators/clash.svg">Clash</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="kaid" name="kaid">
+                        <input type="checkbox" id="kaid" name="r6operator.kaid">
                         <label for="kaid"><img src="operators/kaid.svg">Kaid</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="mozzie" name="mozzie">
+                        <input type="checkbox" id="mozzie" name="r6operator.mozzie">
                         <label for="mozzie"><img src="operators/mozzie.svg">Mozzie</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="warden" name="warden">
+                        <input type="checkbox" id="warden" name="r6operator.warden">
                         <label for="warden"><img src="operators/warden.svg">Warden</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="goyo" name="goyo">
+                        <input type="checkbox" id="goyo" name="r6operator.goyo">
                         <label for="goyo"><img src="operators/goyo.svg">Goyo</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="wamai" name="wamai">
+                        <input type="checkbox" id="wamai" name="r6operator.wamai">
                         <label for="wamai"><img src="operators/wamai.svg">Wamai</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="oryx" name="oryx">
+                        <input type="checkbox" id="oryx" name="r6operator.oryx">
                         <label for="oryx"><img src="operators/oryx.svg">Oryx</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="melusi" name="melusi">
+                        <input type="checkbox" id="melusi" name="r6operator.melusi">
                         <label for="melusi"><img src="operators/melusi.svg">Melusi</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="aruni" name="aruni">
+                        <input type="checkbox" id="aruni" name="r6operator.aruni">
                         <label for="aruni"><img src="operators/aruni.svg">Aruni</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="thunderbird" name="thunderbird">
+                        <input type="checkbox" id="thunderbird" name="r6operator.thunderbird">
                         <label for="thunderbird"><img src="operators/thunderbird.svg">Thunderbird</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="thorn" name="thorn">
+                        <input type="checkbox" id="thorn" name="r6operator.thorn">
                         <label for="thorn"><img src="operators/thorn.svg">Thorn</label>
                     </td>
                 </tr>
@@ -165,135 +165,135 @@
             <tr class="border-4 border-pink-500"></tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="sledge" name="sledge">
+                    <input type="checkbox" id="sledge" name="r6operator.sledge">
                     <label for="sledge"><img src="operators/sledge.svg">Sledge</label>    
                 </td>
                 <td>
-                    <input type="checkbox" id="thatcher" name="thatcher">
+                    <input type="checkbox" id="thatcher" name="r6operator.thatcher">
                     <label for="thatcher"><img src="operators/thatcher.svg">Thatcher</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="ash" name="ash">
+                    <input type="checkbox" id="ash" name="r6operator.ash">
                     <label for="ash"><img src="operators/ash.svg">Ash</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="thermite" name="thermite">
+                    <input type="checkbox" id="thermite" name="r6operator.thermite">
                     <label for="thermite"><img src="operators/thermite.svg">Thermite</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="twitch" name="twitch">
+                    <input type="checkbox" id="twitch" name="r6operator.twitch">
                     <label for="twitch"><img src="operators/twitch.svg">Twitch</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="montagne" name="montagne">
+                    <input type="checkbox" id="montagne" name="r6operator.montagne">
                     <label for="montagne"><img src="operators/montagne.svg">Montagne</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="glaz" name="glaz">
+                    <input type="checkbox" id="glaz" name="r6operator.glaz">
                     <label for="glaz"><img src="operators/glaz.svg">Glaz</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="fuze" name="fuze">
+                    <input type="checkbox" id="fuze" name="r6operator.fuze">
                     <label for="fuze"><img src="operators/fuze.svg">Fuze</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="blitz" name="blitz">
+                    <input type="checkbox" id="blitz" name="r6operator.blitz">
                     <label for="blitz"><img src="operators/blitz.svg">Blitz</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="iq" name="iq">
+                    <input type="checkbox" id="iq" name="r6operator.iq">
                     <label for="iq"><img src="operators/iq.svg">IQ</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="buck" name="buck">
+                    <input type="checkbox" id="buck" name="r6operator.buck">
                     <label for="buck"><img src="operators/buck.svg">Buck</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="blackbeard" name="blackbeard">
+                    <input type="checkbox" id="blackbeard" name="r6operator.blackbeard">
                     <label for="blackbeard"><img src="operators/blackbeard.svg">Blackbeard</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="capitao" name="capitao">
+                    <input type="checkbox" id="capitao" name="r6operator.capitao">
                     <label for="capitao"><img src="operators/capitao.svg">Capitão</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="hibana" name="hibana">
+                    <input type="checkbox" id="hibana" name="r6operator.hibana">
                     <label for="hibana"><img src="operators/hibana.svg">Hibana</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="jackal" name="jackal">
+                    <input type="checkbox" id="jackal" name="r6operator.jackal">
                     <label for="jackal"><img src="operators/jackal.svg">Jackal</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="ying" name="ying">
+                    <input type="checkbox" id="ying" name="r6operator.ying">
                     <label for="ying"><img src="operators/ying.svg">Ying</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="zofia" name="zofia">
+                    <input type="checkbox" id="zofia" name="r6operator.zofia">
                     <label for="zofia"><img src="operators/zofia.svg">Zofia</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="dokkaebi" name="dokkaebi">
+                    <input type="checkbox" id="dokkaebi" name="r6operator.dokkaebi">
                     <label for="dokkaebi"><img src="operators/dokkaebi.svg">Dokkaebi</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="lion" name="lion">
+                    <input type="checkbox" id="lion" name="r6operator.lion">
                     <label for="lion"><img src="operators/lion.svg">Lion</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="finka" name="finka">
+                    <input type="checkbox" id="finka" name="r6operator.finka">
                     <label for="finka"><img src="operators/finka.svg">Finka</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="maverick" name="maverick">
+                    <input type="checkbox" id="maverick" name="r6operator.maverick">
                     <label for="maverick"><img src="operators/maverick.svg">Maverick</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="nomad" name="nomad">
+                    <input type="checkbox" id="nomad" name="r6operator.nomad">
                     <label for="nomad"><img src="operators/nomad.svg">Nomad</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="gridlock" name="gridlock">
+                    <input type="checkbox" id="gridlock" name="r6operator.gridlock">
                     <label for="gridlock"><img src="operators/gridlock.svg">Gridlock</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="nokk" name="nokk">
+                    <input type="checkbox" id="nokk" name="r6operator.nokk">
                     <label for="nokk"><img src="operators/nokk.svg">Nokk</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="amaru" name="amaru">
+                    <input type="checkbox" id="amaru" name="r6operator.amaru">
                     <label for="amaru"><img src="operators/amaru.svg">Amaru</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="kali" name="kali">
+                    <input type="checkbox" id="kali" name="r6operator.kali">
                     <label for="kali"><img src="operators/kali.svg">Kali</label>                   
                 </td>
                 <td>
-                    <input type="checkbox" id="iana" name="iana">
+                    <input type="checkbox" id="iana" name="r6operator.iana">
                     <label for="iana"><img src="operators/iana.svg">Iana</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="ace" name="ace">
+                    <input type="checkbox" id="ace" name="r6operator.ace">
                     <label for="ace"><img src="operators/ace.svg">Ace</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="zero" name="zero">
+                    <input type="checkbox" id="zero" name="r6operator.zero">
                     <label for="zero"><img src="operators/zero.svg">Zero</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="flores" name="flores">
+                    <input type="checkbox" id="flores" name="r6operator.flores">
                     <label for="flores"><img src="operators/flores.svg">Flores</label>
                 </td>
                 <td>
-                    <input type="checkbox" id="osa" name="osa">
+                    <input type="checkbox" id="osa" name="r6operator.osa">
                     <label for="osa"><img src="operators/osa.svg">Osa</label>
                 </td>
             </tr>
@@ -302,8 +302,14 @@
     </div>
         <button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
     </div>
+</div>
+<button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="export" type="submit" onclick="exportCSV()">Export CSV</button>        
+</div>
+<input class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" type="file" style="display:yes" id="fileChooser" accept=".csv" oninput="importCSV()"/>
+<button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="export" type="submit" onclick="deselectAll()">Deselect All</button>        
+</div>
     <footer>
         <hr>
-          All Icons Copyright © 2020 Marco Vockner</footer>
+          <a href="https://r6operator.marcopixel.eu/">All Icons Copyright © 2020 Marco Vockner</a></footer>
 </body>
 </html>
