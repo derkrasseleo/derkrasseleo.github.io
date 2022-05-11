@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "tailwindcss": "^3.0.8"
+    "tailwindcss": "^3.0.24"
   },
   "dependencies": {
     "r6operators": "^2.1.0"

@@ -67,6 +67,10 @@ input[type="checkbox"] {
     }
     td
     {
+        @apply hover:bg-pink-500;  
         width:14.29%;
         text-align: center;
+    }
+    button,input {
+        @apply mt-4 mb-4 p-2 text-xl text-center text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose hover:bg-pink-500 dark:bg-black;
     }

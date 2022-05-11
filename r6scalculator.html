@@ -7,7 +7,7 @@
 
 <body onload="getAndSetProperties()" class="dark:bg-black text-green-400 pl-8 pt-4 pr-8">
     <script src="js/r6scalculator.js"></script>
-    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.2</h1>
+    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.2.1</h1>
     <ul class="list-disc pl-10">
         <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock the selected operators.</li>
         <li class="text-xl">The time is calculated by assuming one game takes about 15 minutes and you recieve 239 renown for each game.</li>    
@@ -15,7 +15,7 @@
     </ul>
 
     <p class="text-xl pt-4 pb-4">I currently have 
-    <input type="number" id="ansehen" class="border-2 m-2 p-2 text-xl text-center text-green-400 dark:bg-black" value="0">
+    <input type="number" id="ansehen" value="0">
     renown (optional)</p>
 
     <div>
@@ -300,13 +300,13 @@
         </tr>
     </table>
     </div>
-        <button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
+        <button id="calculate" type="submit" value="caluclate" onclick="calculate()">Calculate</button>        
     </div>
 </div>
-<button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="export" type="submit" onclick="exportCSV()">Export CSV</button>        
+<button id="export" type="submit" onclick="exportCSV()">Export CSV</button>        
 </div>
-<input class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" type="file" style="display:yes" id="fileChooser" accept=".csv" oninput="importCSV()"/>
-<button class="mt-4 mb-4 p-2 text-xl text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose white:text-white" id="export" type="submit" onclick="deselectAll()">Deselect All</button>        
+<input type="file" style="display:yes" id="fileChooser" accept=".csv" oninput="importCSV()"/>
+<button id="export" type="submit" onclick="deselectAll()">Deselect All</button>        
 </div>
     <footer>
         <hr>

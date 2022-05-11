@@ -189,7 +189,7 @@ const WebUntis = require('webuntis');
 
 const untis = new WebUntis('htbla_kaindorf', 'traley17', 't&BpMsJd6q#p', 'mese.webuntis.com');
 
-let endTime;
+//let endTime;
 let day = new Date(2022, 0, 12);
 
 function getSchuleAus(day) {
@@ -206,10 +206,7 @@ untis
     });
 
 }
-
 getSchuleAus(day);
-document.getElementById("schuleAus").innerHTML = "New text!";
-//console.log(endTime);
 },{"webuntis":308}],3:[function(require,module,exports){
 module.exports = require('./lib/axios');
 },{"./lib/axios":5}],4:[function(require,module,exports){
