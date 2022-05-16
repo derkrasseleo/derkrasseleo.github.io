@@ -14,19 +14,16 @@ a {
 input {
     @apply text-black;
 }
-
 input[type="checkbox"] {
     display: none;
     }
-
-    label {
+label {
     @apply  m-2 p-2 border-2 border-green-500;
     display: block;
     position: relative;
     cursor: pointer;
-    }
-
-    label:before {
+}
+label:before {
     background-color: white;
     color: white;
     content: " ";
@@ -41,36 +38,31 @@ input[type="checkbox"] {
     /* line-height: 28px; */
     transition-duration: 0.2s;
     transform: scale(0);
-    }
-
-    label img {
+}
+label img {
     height: 8rem;
     width: 8rem;
     transition-duration: 0.1s;
     transform-origin: 50% 50%;
-    }
-
-    :checked + label {
+}
+:checked + label {
     @apply border-pink-500;
-    }
-
-    :checked + label:before {
+}
+:checked + label:before {
     content: "✓";
     background-color: green;
     transform: scale(1);
     align-self: center;
-    }
-
-    :checked + label img {
+}
+:checked + label img {
     transform: scale(0.9);
     z-index: -1;
-    }
-    td
-    {
-        @apply hover:bg-pink-500;  
-        width:14.29%;
-        text-align: center;
-    }
-    button,input {
-        @apply mt-4 mb-4 p-2 text-xl text-center text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose hover:bg-pink-500 dark:bg-black;
-    }
+}
+td {
+    @apply hover:bg-pink-500;  
+    width:14.29%;
+    text-align: center;
+}
+button,input {
+    @apply mt-4 mb-4 p-2 text-xl text-center text-green-500 font-bold border-4 border-pink-500 rounded-md leading-loose hover:bg-pink-500 dark:bg-black;
+}

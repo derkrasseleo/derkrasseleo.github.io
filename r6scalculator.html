@@ -7,11 +7,20 @@
 
 <body onload="getAndSetProperties()" class="dark:bg-black text-green-400 pl-8 pt-4 pr-8">
     <script src="js/r6scalculator.js"></script>
-    <h1 class="text-4xl leading-loose font-bold">R6S-Calculator V1.2.1</h1>
-    <ul class="list-disc pl-10">
-        <li class="text-xl">Choose the operators you don't own yet to calculate how long it will take you to unlock the selected operators.</li>
+    <nav style="font-size: 1.25rem; padding: 1rem; border: 0.01rem; border-color: rgb(74 222 128 / var(--tw-text-opacity)); border-style: dashed; ">
+        <table>
+            <tr style="cursor: pointer">
+                <td onclick="location.href = 'index.html'" >Home</td>
+                <td onclick="location.href = 'tools.html'" >Tools</td>
+            </tr>
+        </table>
+
+    </nav>
+    <h1>R6S-Calculator</h1>
+    <ul class="text-green-500 list-disc pl-10">
+        <li class="text-xl">Choose the operators you <b>don't own yet</b> to calculate how long it will take you to unlock the selected operators.</li>
         <li class="text-xl">The time is calculated by assuming one game takes about 15 minutes and you recieve 239 renown for each game.</li>    
-        <li class="text-xl">Last updated: 11.05.2022</li>
+        <li class="text-xl">Last update: 16.05.2022 (V1.2.2)</li>
     </ul>
 
     <p class="text-xl pt-4 pb-4">I currently have 
@@ -19,7 +28,7 @@
     renown (optional)</p>
 
     <div>
-        <table class="border-collapse border-4 border-pink-500">
+        <table class="border-4 border-pink-500">
                 <th class="text-pink-500 text-2xl border-pink-500 rounded-br-md p-4">Defenders</th>
                 <tr class="border-4 border-pink-500"></tr>
                 <tr>
@@ -310,6 +319,6 @@
 </div>
     <footer>
         <hr>
-          <a href="https://r6operator.marcopixel.eu/">All Icons Copyright © 2020 Marco Vockner</a></footer>
+          <a href="https://r6operators.marcopixel.eu/">All Icons Copyright © 2020 Marco Vockner</a></footer>
 </body>
 </html>
