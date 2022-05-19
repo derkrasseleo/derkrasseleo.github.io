@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bummerlzähler</title>
+    <script src="bummerlzaehler.js"></script>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Bummerlzähler</h1>
+
+    <div id=player1>
+        <hr>
+        <b>
+            <p id="player1Name">player 1</p>
+        </b>
+        <button onclick="addBummerl(spieler1)">Bummerl hinzufügen</button>
+        <button onclick="deleteBummerl(spieler1)">Bummerl entfernen</button>
+        <p id="zaehler1">Bummerl: </p>
+    </div>
+    <div id=player2>
+        <hr>
+        <b>
+            <p id="player2Name">player 2</p>
+        </b>
+        <button onclick="addBummerl(spieler2)">Bummerl hinzufügen</button>
+        <button onclick="deleteBummerl(spieler2)">Bummerl entfernen</button>
+        <p id="zaehler2">Bummerl: </p>
+    </div>
+    <div id=player3>
+        <hr>
+        <b>
+            <p id="player3Name">player 3</p>
+        </b>
+        <button onclick="addBummerl(spieler3)">Bummerl hinzufügen</button>
+        <button onclick="deleteBummerl(spieler3)">Bummerl entfernen</button>
+        <p id="zaehler3">Bummerl: </p>
+    </div>
+    <div id=player4>
+        <hr>
+        <b>
+            <p id="player4Name">player 4</p>
+        </b>
+        <button onclick="addBummerl(spieler4)">Bummerl hinzufügen</button>
+        <button onclick="deleteBummerl(spieler4)">Bummerl entfernen</button>
+        <p id="zaehler4">Bummerl: </p>
+    </div>
+</body>
+
+</html>
