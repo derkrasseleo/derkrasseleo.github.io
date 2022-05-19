@@ -1,0 +1,25 @@
+@keyframes example {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+body {
+    background-color: white;
+    animation-name: example;
+    animation-duration: 1500ms;
+}
+button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+links {
+    max-width: 100%;
+}
+.links:hover {
+    background-color: rgb(255, 223, 180);
+    background-clip: border-box;
+    background-size: contain;
+    animation-name: hover;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+}
