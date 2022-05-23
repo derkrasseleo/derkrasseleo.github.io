@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="src.js"></script>
+    <link rel="stylesheet" href="../traucons/style.css">
+    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <script src="../node_modules/@splidejs/splide/dist/js/splide.js"></script>
+    <script src="../traucons/src.js"></script>
     <title>TRAUCONS - Homepage</title>
-    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../traucons/media/favicon.ico" type="image/x-icon">
 </head>
-<body style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-    <img src="./media/logo_neu.svg" alt="" width="1000" style="max-width: 100%;">
+<body>
+    <img src="../traucons/media/logo_neu.svg" alt="TrauCons Logo" width="1000" style="max-width: 100%; padding-top: 3rem;">
 
-    <div style="padding: 2rem; margin: 2rem; border: 1rem; border-color: black; border-width: 1rem;max-width: 100%;">
-        <a id=mail href="mailto:admin@traucons.eu" onmouseover="hover(this.id);" style="border-width: 1rem"><img class="links" src="./media/mail.svg" width="200"></img></a>
-        <a href="tel:+436763030970"><img class="links" src="./media/phone.svg" width="200"></img></a>
-        <a href="https://www.xing.com/profile/Udo_Traussnigg"><img class="links" src="./media/xing2.svg" width="200"></img></a></img>
-        <a href="https://www.instagram.com/traucons"><img class="links" src="./media/instagram.svg" width="200"></img></a>
+    <div class="iconContainer">
+        <a href="mailto:admin@traucons.eu"><img class="links" src="../traucons/media/mail.svg"></img></a>
+        <a href="tel:+436763030970"><img class="links" src="../traucons/media/phone.svg"></img></a>
+        <a href="https://www.xing.com/profile/Udo_Traussnigg"><img class="links" src="../traucons/media/xing2.svg"></img></a></img>
+        <a href="https://www.instagram.com/traucons"><img class="links" src="../traucons/media/instagram.svg"></img></a>
     </div>
 
+<h2>Zufriedene Kunden</h2>
 
+    <section class="splide" data-splide='{"type":"loop", "autoheight":true, "height":350}' aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide"><img src="../traucons/media/traucons.png" alt=""></li>
+                  <li class="splide__slide"><img src="../traucons/media/logo_neu.svg" alt=""></li>
+                  <li class="splide__slide">Slide 03</li>
+              </ul>
+        </div>
+      </section>
+
+      <script>
+        new Splide( '.splide' ).mount();
+      </script>
+      
     <footer style="opacity: 50%;">
         <hr color="FF6300" width="1000" style="max-width: 100%;">
-        <button onclick="location.href='impressum.html'" style="background-color: transparent; border: 0rem; font-size: large;">Impressum</button>
+        <button onclick="location.href='../traucons/impressum.html'" style="background-color: transparent; border: 0rem; font-size: large;">Impressum</button>
     </footer>
 </body>

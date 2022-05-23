@@ -10,19 +10,19 @@
     <h2>How long until my download is finished?</h2>
     <p class="font-bold pt-2 pb-2">Keep in mind: 10 Mbps (Megabits) = 1,25 MB/s (MegaBytes)</p>
     <select name="unit" id="unit" class="text-green-500 dark:bg-black border-pink-500 border-2">
-        <option value="mbit">Mb/s</option>
         <option value="mbyte">MB/s</option>
+        <option value="mbit">Mb/s</option>
     </select>
     <div class="p-4">
         <h3>Size of download in GB:</h3>
-        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" stwidth: auto;" type="number" name="downloadSize" id="dlSize">
+        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="downloadSize" id="dlSize">
         <h3>Already downloaded:</h3>
-        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="currentSize" id="crSize">
+        <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="currentSize" id="crSize" value="0">
         <h3>Speed:</h3>
         <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" style="width: auto;" type="number" name="downloadSpeed" id="dlSpeed">
     </div>
     <button class="border-2 rounded-xl m-4 p-2" onclick="wielangenoch(dlSize,dlSpeed)">Calculate</button>
-    <hr id="hr" style="width: auto" class="p-2" hidden=true>
+    <hr id="hrErgebnisse" style="width: auto" class="p-2" hidden>
     <p id="remaining"></p>
     <p id="current"></p>
 </body>
