@@ -2,13 +2,17 @@
 
 <head>
     <title>How long until my Download is finished?</title>
-    <script src="js/downloadtime.js"></script>
-	<link rel="stylesheet" href="dist/output.css">
+    <script src="./downloadtime/downloadtime.js"></script>
+	<link rel="stylesheet" href="./dist/output.css">
 </head>
 
 <body class="dark:bg-black text-green-400 m-4 text-center">
     <h2>How long until my download is finished?</h2>
-    <p class="font-bold pt-2 pb-2">Keep in mind: 10 Mbps = 1,25 MB/s</p>
+    <p class="font-bold pt-2 pb-2">Keep in mind: 10 Mbps (Megabits) = 1,25 MB/s (MegaBytes)</p>
+    <select name="unit" id="unit" class="text-green-500 dark:bg-black border-pink-500 border-2">
+        <option value="mbit">Mb/s</option>
+        <option value="mbyte">MB/s</option>
+    </select>
     <div class="p-4">
         <h3>Size of download in GB:</h3>
         <input class="text-center text-green-400 dark:bg-black border-2 rounded-sm p-1 m-2" stwidth: auto;" type="number" name="downloadSize" id="dlSize">
@@ -21,5 +25,4 @@
     <hr style="width: auto" class="p-2">
     <p id="remaining"></p>
     <p id="current"></p>
-
 </body>
