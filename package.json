@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.0.2",
+    "@splidejs/splide-extension-auto-scroll": "^0.4.2",
     "r6operators": "^2.1.0"
   }
 }

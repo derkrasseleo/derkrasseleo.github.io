@@ -3,38 +3,39 @@
     <link rel="stylesheet" href="../traucons/style.css">
     <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css">
     <script src="../node_modules/@splidejs/splide/dist/js/splide.js"></script>
-    <script src="../traucons/src.js"></script>
+    <script src="/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.js"></script>
     <title>TRAUCONS - Homepage</title>
     <link rel="shortcut icon" href="../traucons/media/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <header></header>
     <img src="../traucons/media/logo_neu.svg" alt="TrauCons Logo" width="1000" style="max-width: 100%; padding-top: 3rem;">
 
+    <h2 style="padding-top: 2rem;">Kontaktieren Sie Ihren Ansprechpartner: FH.Prof. DI Dr.techn. Udo Traußnigg</h2>
+
     <div class="iconContainer">
-        <a href="mailto:admin@traucons.eu"><img class="links" src="../traucons/media/mail.svg"></img></a>
+        <a href="mailto:udo.traussnigg@traucons.eu"><img class="links" src="../traucons/media/mail.svg"></img></a>
         <a href="tel:+436763030970"><img class="links" src="../traucons/media/phone.svg"></img></a>
         <a href="https://www.xing.com/profile/Udo_Traussnigg"><img class="links" src="../traucons/media/xing2.svg"></img></a></img>
         <a href="https://www.instagram.com/traucons"><img class="links" src="../traucons/media/instagram.svg"></img></a>
     </div>
 
-<h2>Zufriedene Kunden</h2>
-
-    <section class="splide" data-splide='{"type":"loop", "autoheight":true, "height":350}' aria-label="Splide Basic HTML Example">
+    <section class="splide" data-splide='{"type":"fade", "autoheight":"true", "pagination":false, "arrows":false, "autoplay": "true", "rewind":"true", "speed":250, "interval":1000}' aria-label="Splide Basic HTML Example" style="padding-bottom: 4rem;">
         <div class="splide__track">
               <ul class="splide__list">
-                  <li class="splide__slide"><img src="../traucons/media/traucons.png" alt=""></li>
-                  <li class="splide__slide"><img src="../traucons/media/logo_neu.svg" alt=""></li>
-                  <li class="splide__slide">Slide 03</li>
+                  <li class="splide__slide"><img src="../traucons/media/Switcher/consequent.png" alt=""></li>
+                  <li class="splide__slide"><img src="../traucons/media/Switcher/consensual.png" alt=""></li>
               </ul>
         </div>
       </section>
-
-      <script>
-        new Splide( '.splide' ).mount();
-      </script>
       
-    <footer style="opacity: 50%;">
+    <footer class="fusszeile">
         <hr color="FF6300" width="1000" style="max-width: 100%;">
-        <button onclick="location.href='../traucons/impressum.html'" style="background-color: transparent; border: 0rem; font-size: large;">Impressum</button>
+        <button onclick="location.href='../traucons/impressum.html'" class="impressumButton" >Impressum</button>
     </footer>
+
+    <script>
+        new Splide( '.splide' ).mount();
+    </script>
+
 </body>
