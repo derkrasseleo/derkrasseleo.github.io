@@ -11,7 +11,7 @@
         <table>
             <tr style="cursor: pointer">
                 <td onclick="location.href = '../'" >Home</td>
-                <td onclick="location.href = '../tools'" >Tools</td>
+                <td onclick="location.href = '../projects'" >Projects</td>
             </tr>
         </table>
 
@@ -315,6 +315,7 @@
 <button id="export" type="submit" onclick="exportCSV()">Export CSV</button>        
 </div>
 <input type="file" style="display:yes" id="fileChooser" accept=".csv" oninput="importCSV()"/>
+<button id="export" type="submit" onclick="selectAll()">Select All</button>      
 <button id="export" type="submit" onclick="deselectAll()">Deselect All</button>        
 </div>
     <footer>
