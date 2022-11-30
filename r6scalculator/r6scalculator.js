@@ -66,6 +66,14 @@ function importCSV() {
     
 }
 
+function selectAll() {
+    checkboxes = document.querySelectorAll('input');
+    checkboxes.forEach(cb => {
+        cb.checked = true;
+    });
+    localStorage.setItem("operators", "");
+}
+
 function deselectAll() {
     checkboxes = document.querySelectorAll('input:checked');
     checkboxes.forEach(cb => {
